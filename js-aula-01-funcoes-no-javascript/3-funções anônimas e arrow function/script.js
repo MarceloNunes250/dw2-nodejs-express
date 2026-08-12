@@ -1,0 +1,28 @@
+//FUNÇÃO ANÔNIMA
+
+const mult = function (x) {
+  return x * 2;
+};
+const x = 15;
+document.write(`<p>O resultado da multiplicação é ${mult(x)}</p>`);
+
+//FUNÇÃO SETA - ARROW FUNCTION
+const triplo = (y) => {
+  return y * 3;
+};
+const y = 100;
+
+document.write(`<p>O triplo de ${y} é ${triplo(y)}</p>`);
+
+//FUNÇÃO SETA - COM MAIS DE UM PARÂMETRO - ARROW FUNCTION
+const calculadora = (num1, operador, num2) => {
+  return eval(`${num1} ${operador} ${num2}`);
+};
+// eval no javacript é uma função nativa que realiza cálculos matemáticos a partir de dois números e um operador.
+const num1 = 33.5;
+const operador = "*";
+const num2 = 2;
+
+document.write(
+  `<p>O resultado de ${num1} ${operador} ${num2} é igual a ${calculadora(num1, operador, num2)}</p>`,
+);
