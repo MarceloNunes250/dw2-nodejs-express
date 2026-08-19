@@ -26,3 +26,23 @@ const num2 = 2;
 document.write(
   `<p>O resultado de ${num1} ${operador} ${num2} é igual a ${calculadora(num1, operador, num2)}</p>`,
 );
+
+//FUNÇÃO IMEDIATA (IIFE - Immediately Invoked Function Expression)
+const imediata = (function () {
+  document.write("<p> Estou sendo executada imediatamente!</p>");
+})(); //PASSANDO parâmetros;
+
+//FUNÇÃO IMEDIATA - COM PARÂMETROS
+const loadUser = (function (user){
+    document.write(`<p>Carregando as informações do usuário: <strong>${user}</strong>...</p>`)
+
+//Mostrando as informações após 3 segundos
+setTimeout(() => {
+    document.write(`
+        Nome: Marcelo Nunes <br>
+        Idade: 18 anos <br>
+        Cidade: Registro <br>
+        Hobby: Estudar 
+        `);
+}, 3000);
+})("Marcelo"); ///Passando o parâmetro
